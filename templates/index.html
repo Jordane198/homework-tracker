@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form action="/add" method="POST" class="homework-form">
+    <input type="text" name="lesson" placeholder="lesson" required>
+    <input type="text" name="task" placeholder="Homework Task" required>
+    <input type="date" name="deadline" required>
+    <button type="submit">Add Homework</button>
+</form>
+
+<h2> 🔜 Pending Homework</h2>
+<ul class="Pending">
+    {% for hw in homework %}
+        {% if not hw.completed %}
+            <li>
+                <strong>{{ hw.lesson }}:</strong> {{ hw.task}} <br>
+                <small>🗓️ Deadline: {{ hw.deadline }}</small>
+                <a href="/complete/{{ loop.index0 }}">✅ Mark as Done</a>
+              
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<h2>✅ Completed Homework</h2>
+<ul class="completed">
+    {% for hw in homework %}
+        {% if hw.completed %}
+            <li>
+               <strong>{{ hw.lesson }}:</strong> {{ hw.task}} <br>
+                <small> 🗓️ Deadline: {{ hw.deadline }}</small>
+                <a href="/delete/{{ loop.index0 }}">❌ Delete</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+  
+
+    
+</body>
+</html>
