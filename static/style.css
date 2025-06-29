@@ -8,10 +8,11 @@ body{
 .container{
     max-width: 600px;
     margin: auto;
-    background: white;
+    background: rgb(185, 184, 184);
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: #333 2px 2px 2px 2px;
 }
 
 h1,h2{
