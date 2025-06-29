@@ -19,7 +19,10 @@ A simple and efficient Homework Tracker web app to help students manage their ta
 ## 🖼️ Screenshot
 
 <!-- Replace this path with the actual image path when available -->
-![Homework Tracker Screenshot](images/Skärmbild 2025-06-29 202255.png)
+![Homework Tracker Screenshot](images/screenshot.png)
+
+
+)
 
 ---
 
